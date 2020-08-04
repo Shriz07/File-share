@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ClientAppController">
+   <children>
+      <ScrollPane fx:id="lblScrollPane" layoutX="251.0" layoutY="436.0" prefHeight="250.0" prefWidth="652.0">
+         <content>
+            <ListView fx:id="lblLog" prefHeight="246.0" prefWidth="639.0" />
+         </content>
+      </ScrollPane>
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="900.0">
+        <menus>
+          <Menu fx:id="lblMenuLogin" mnemonicParsing="false" text="Login: notSet" />
+          <Menu fx:id="lblMenuPath" mnemonicParsing="false" text="Path: notSet" />
+        </menus>
+      </MenuBar>
+      <MenuBar layoutX="251.0" layoutY="411.0" prefHeight="25.0" prefWidth="652.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Log">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TableView fx:id="lblTable" layoutX="251.0" layoutY="27.0" prefHeight="381.0" prefWidth="645.0">
+        <columns>
+          <TableColumn fx:id="lblFilename" minWidth="250.0" prefWidth="250.0" text="Filename" />
+          <TableColumn fx:id="lblModified" minWidth="150.0" prefWidth="150.0" text="Modified" />
+            <TableColumn fx:id="lblSize" minWidth="250.0" prefWidth="250.0" text="Size in bytes" />
+        </columns>
+      </TableView>
+      <TitledPane alignment="CENTER" animated="false" contentDisplay="CENTER" layoutY="26.0" prefHeight="661.0" prefWidth="247.0" text="Users">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="629.0" prefWidth="247.0">
+               <children>
+                  <ListView fx:id="lblUsers" prefHeight="549.0" prefWidth="247.0" />
+                  <Button fx:id="lblSendFile" layoutX="91.0" layoutY="578.0" mnemonicParsing="false" onAction="#SendFileToUser" text="Send File" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
+   </children>
+</AnchorPane>

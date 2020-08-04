@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+
+<Tab fx:id="lblTab" text="Untitled Tab" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.TabController">
+   <content>
+      <TableView fx:id="lblTable" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn fx:id="lblFilename" minWidth="250.0" prefWidth="250.0" text="Filename" />
+          <TableColumn fx:id="lblModified" minWidth="250.0" prefWidth="250.0" text="Modified" />
+            <TableColumn fx:id="lblSize" minWidth="250.0" prefWidth="250.0" text="Size" />
+        </columns>
+      </TableView>
+   </content>
+</Tab>

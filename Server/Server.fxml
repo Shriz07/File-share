@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ServerAppController">
+   <children>
+      <TabPane fx:id="lblTabPane" layoutY="28.0" prefHeight="446.0" prefWidth="900.0" tabClosingPolicy="UNAVAILABLE" />
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="900.0">
+        <menus>
+          <Menu fx:id="lblMenuUsers" mnemonicParsing="false" text="Registered Users: 0">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <ScrollPane fx:id="lblScrollPane" layoutX="1.0" layoutY="486.0" prefHeight="214.0" prefWidth="900.0">
+         <content>
+            <ListView fx:id="lblLog" prefHeight="214.0" prefWidth="888.0" />
+         </content>
+      </ScrollPane>
+      <MenuBar layoutX="1.0" layoutY="461.0" prefHeight="25.0" prefWidth="900.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Log">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>
